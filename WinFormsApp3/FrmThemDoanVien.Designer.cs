@@ -47,7 +47,7 @@
             txtsdt = new TextBox();
             btnthemmoi = new Button();
             btnxoa = new Button();
-            btnketthuc = new Button();
+            btndong = new Button();
             label9 = new Label();
             cbochidoan = new ComboBox();
             label10 = new Label();
@@ -217,15 +217,17 @@
             btnxoa.TabIndex = 18;
             btnxoa.Text = "Xóa";
             btnxoa.UseVisualStyleBackColor = true;
+            btnxoa.Click += btnxoa_Click;
             // 
-            // btnketthuc
+            // btndong
             // 
-            btnketthuc.Location = new Point(392, 360);
-            btnketthuc.Name = "btnketthuc";
-            btnketthuc.Size = new Size(94, 29);
-            btnketthuc.TabIndex = 19;
-            btnketthuc.Text = "Kết thúc";
-            btnketthuc.UseVisualStyleBackColor = true;
+            btndong.Location = new Point(392, 360);
+            btndong.Name = "btndong";
+            btndong.Size = new Size(94, 29);
+            btndong.TabIndex = 19;
+            btndong.Text = "Đóng";
+            btndong.UseVisualStyleBackColor = true;
+            btndong.Click += btndong_Click;
             // 
             // label9
             // 
@@ -271,7 +273,7 @@
             Controls.Add(label10);
             Controls.Add(cbochidoan);
             Controls.Add(label9);
-            Controls.Add(btnketthuc);
+            Controls.Add(btndong);
             Controls.Add(btnxoa);
             Controls.Add(btnthemmoi);
             Controls.Add(txtsdt);
@@ -294,6 +296,7 @@
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FrmThemDoanVien";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Thêm Đoàn viên";
             TopMost = true;
             Load += FrmThemDoanVien_Load;
@@ -321,7 +324,7 @@
         public TextBox txtsdt;
         public Button btnthemmoi;
         public Button btnxoa;
-        public Button btnketthuc;
+        public Button btndong;
         public Label label9;
         public ComboBox cbochidoan;
         public Label label10;

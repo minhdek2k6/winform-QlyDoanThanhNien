@@ -108,7 +108,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI Light", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 163);
-            label5.Location = new Point(31, 80);
+            label5.Location = new Point(31, 75);
             label5.Name = "label5";
             label5.Size = new Size(287, 31);
             label5.TabIndex = 1;
@@ -237,6 +237,7 @@
             btnchidoan.Text = "          Chi Đoàn";
             btnchidoan.TextAlign = ContentAlignment.MiddleLeft;
             btnchidoan.UseVisualStyleBackColor = false;
+            btnchidoan.Click += btnchidoan_Click;
             // 
             // btndoanvien
             // 
@@ -311,6 +312,7 @@
             btndangkyhoatdong.Text = "          Đăng ký tham gia hoạt động";
             btndangkyhoatdong.TextAlign = ContentAlignment.MiddleLeft;
             btndangkyhoatdong.UseVisualStyleBackColor = false;
+            btndangkyhoatdong.Click += btndangkyhoatdong_Click;
             // 
             // btntaohoatdong
             // 
@@ -322,6 +324,7 @@
             btntaohoatdong.Text = "          Tạo hoạt động mới";
             btntaohoatdong.TextAlign = ContentAlignment.MiddleLeft;
             btntaohoatdong.UseVisualStyleBackColor = false;
+            btntaohoatdong.Click += btntaohoatdong_Click;
             // 
             // btnkhenthuongkyluat
             // 
@@ -504,6 +507,7 @@
             btntaohoatdongmoi2.TabIndex = 4;
             btntaohoatdongmoi2.Text = "Tạo hoạt động mới";
             btntaohoatdongmoi2.UseVisualStyleBackColor = false;
+            btntaohoatdongmoi2.Click += btntaohoatdongmoi2_Click;
             // 
             // btnthemchidoan
             // 
@@ -515,6 +519,7 @@
             btnthemchidoan.TabIndex = 3;
             btnthemchidoan.Text = "Thêm chi Đoàn";
             btnthemchidoan.UseVisualStyleBackColor = false;
+            btnthemchidoan.Click += btnthemchidoan_Click;
             // 
             // btnthemdoanvien
             // 
@@ -540,6 +545,7 @@
             // 
             // panelmain
             // 
+            panelmain.BackgroundImageLayout = ImageLayout.Stretch;
             panelmain.BorderStyle = BorderStyle.FixedSingle;
             panelmain.Dock = DockStyle.Fill;
             panelmain.Location = new Point(360, 142);
@@ -559,7 +565,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FrmTrangChu";
             Text = "Phần mềm quản lý Đoàn thanh niên trường Đại học Thái Bình";
-            TopMost = true;
+            WindowState = FormWindowState.Maximized;
             Load += FrmTrangChu_Load;
             panel1.ResumeLayout(false);
             panel7.ResumeLayout(false);

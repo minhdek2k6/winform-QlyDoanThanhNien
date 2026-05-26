@@ -133,6 +133,7 @@
             txttendangnhap.Size = new Size(300, 27);
             txttendangnhap.TabIndex = 4;
             txttendangnhap.Enter += txttendangnhap_Enter;
+            txttendangnhap.KeyDown += txttendangnhap_KeyDown;
             txttendangnhap.Leave += txttendangnhap_Leave;
             // 
             // pictureBox5
@@ -208,7 +209,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FrmDangNhap";
             Text = "Phần mềm quản lý Đoàn thanh niên trường Đại học Thái Bình";
-            TopMost = true;
+            WindowState = FormWindowState.Maximized;
             Load += FrmDangNhap_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();

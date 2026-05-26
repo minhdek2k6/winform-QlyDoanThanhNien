@@ -1,6 +1,6 @@
 ﻿namespace WinFormsApp3
 {
-    partial class UCDoanVien
+    partial class UCChiDoan
     {
         /// <summary> 
         /// Required designer variable.
@@ -37,12 +37,10 @@
             btnxoa = new Button();
             btnsua = new Button();
             btnthemmoi = new Button();
-            panel3 = new Panel();
-            dgvdoanvien = new DataGridView();
+            dgvchidoan = new DataGridView();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
-            panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvdoanvien).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvchidoan).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -56,7 +54,7 @@
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(1542, 85);
-            panel1.TabIndex = 0;
+            panel1.TabIndex = 1;
             // 
             // cboloc
             // 
@@ -65,7 +63,6 @@
             cboloc.Name = "cboloc";
             cboloc.Size = new Size(99, 28);
             cboloc.TabIndex = 3;
-            cboloc.SelectedIndexChanged += cboloc_SelectedIndexChanged;
             // 
             // btnlammoi
             // 
@@ -75,7 +72,6 @@
             btnlammoi.TabIndex = 2;
             btnlammoi.Text = "Làm mới";
             btnlammoi.UseVisualStyleBackColor = true;
-            btnlammoi.Click += btnlammoi_Click;
             // 
             // btntimkiem
             // 
@@ -85,7 +81,6 @@
             btntimkiem.TabIndex = 1;
             btntimkiem.Text = "Tìm kiếm";
             btntimkiem.UseVisualStyleBackColor = true;
-            btntimkiem.Click += btntimkiem_Click;
             // 
             // txttimkiem
             // 
@@ -103,7 +98,7 @@
             panel2.Location = new Point(1373, 85);
             panel2.Name = "panel2";
             panel2.Size = new Size(169, 676);
-            panel2.TabIndex = 1;
+            panel2.TabIndex = 2;
             // 
             // btnxoa
             // 
@@ -113,7 +108,6 @@
             btnxoa.TabIndex = 2;
             btnxoa.Text = "Xóa";
             btnxoa.UseVisualStyleBackColor = true;
-            btnxoa.Click += btnxoa_Click;
             // 
             // btnsua
             // 
@@ -123,7 +117,6 @@
             btnsua.TabIndex = 1;
             btnsua.Text = "Sửa";
             btnsua.UseVisualStyleBackColor = true;
-            btnsua.Click += btnsua_Click;
             // 
             // btnthemmoi
             // 
@@ -135,54 +128,44 @@
             btnthemmoi.UseVisualStyleBackColor = true;
             btnthemmoi.Click += btnthemmoi_Click;
             // 
-            // panel3
+            // dgvchidoan
             // 
-            panel3.Controls.Add(dgvdoanvien);
-            panel3.Dock = DockStyle.Fill;
-            panel3.Location = new Point(0, 85);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(1373, 676);
-            panel3.TabIndex = 2;
+            dgvchidoan.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvchidoan.Dock = DockStyle.Fill;
+            dgvchidoan.Location = new Point(0, 85);
+            dgvchidoan.Name = "dgvchidoan";
+            dgvchidoan.RowHeadersWidth = 51;
+            dgvchidoan.Size = new Size(1373, 676);
+            dgvchidoan.TabIndex = 3;
             // 
-            // dgvdoanvien
-            // 
-            dgvdoanvien.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvdoanvien.Dock = DockStyle.Fill;
-            dgvdoanvien.Location = new Point(0, 0);
-            dgvdoanvien.Name = "dgvdoanvien";
-            dgvdoanvien.RowHeadersWidth = 51;
-            dgvdoanvien.Size = new Size(1373, 676);
-            dgvdoanvien.TabIndex = 0;
-            // 
-            // UCDoanVien
+            // UCChiDoan
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(panel3);
+            Controls.Add(dgvchidoan);
             Controls.Add(panel2);
             Controls.Add(panel1);
-            Name = "UCDoanVien";
+            Name = "UCChiDoan";
             Size = new Size(1542, 761);
+            Load += UCChiDoan_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
-            panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dgvdoanvien).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvchidoan).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Panel panel1;
+        private ComboBox cboloc;
         private Button btnlammoi;
         private Button btntimkiem;
         private TextBox txttimkiem;
         private Panel panel2;
-        private Panel panel3;
-        private DataGridView dgvdoanvien;
         private Button btnxoa;
         private Button btnsua;
         private Button btnthemmoi;
-        private ComboBox cboloc;
+        private DataGridView dgvchidoan;
     }
 }

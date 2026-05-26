@@ -124,7 +124,7 @@ namespace WinFormsApp3
 
                 if (count > 0)
                 {
-                    MessageBox.Show("Đăng nhập thành công");
+                    MessageBox.Show("Đăng nhập thành công","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Information);
 
                     FrmTrangChu frm = new FrmTrangChu();
                     frm.Show();
@@ -133,16 +133,24 @@ namespace WinFormsApp3
                 }
                 else
                 {
-                    MessageBox.Show("Sai tài khoản hoặc mật khẩu");
+                    MessageBox.Show("Sai tài khoản hoặc mật khẩu","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi: " + ex.Message);
+                MessageBox.Show("Lỗi: " + ex.Message,"Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
             finally
             {
                 conn.Close();
+            }
+        }
+
+        private void txttendangnhap_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtmatkhau.Focus();
             }
         }
     }
